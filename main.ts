@@ -92,4 +92,23 @@ add(5)
 // function add(num1: number, num2: number = 10)
 
 
+// OBJECTS
 
+interface Person {
+    firstName: string
+    lastName?: string
+}
+
+function fullName(person: Person) {
+    console.log(`${person.firstName} ${person.lastName}`)
+}
+
+let p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+}
+
+fullName(p)
+
+// Note that a field can be made optional with question mark
+// Use case would be in forms where not all fields are mandatory

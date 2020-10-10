@@ -66,6 +66,13 @@ add(5, 10);
 //add '?' to end of a parameter in function, then that parameter is optional
 // can now call add with one input
 add(5);
-// optional parameters must always be after the required parameters
-// Default parameters are when you assign a value to it, like the second param below
-// function add(num1: number, num2: number = 10)
+function fullName(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+var p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+fullName(p);
+// Note that a field can be made optional with question mark
+// Use case would be in forms where not all fields are mandatory
