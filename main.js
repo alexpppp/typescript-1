@@ -55,7 +55,17 @@ var anyType;
 anyType = 20;
 anyType = true;
 function add(num1, num2) {
-    return num1 + num2;
+    if (num2 === void 0) { num2 = 10; }
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
 }
 add(5, 10);
 // OPTIONAL/DEFAULT PARAMETERS
+//add '?' to end of a parameter in function, then that parameter is optional
+// can now call add with one input
+add(5);
+// optional parameters must always be after the required parameters
+// Default parameters are when you assign a value to it, like the second param below
+// function add(num1: number, num2: number = 10)
