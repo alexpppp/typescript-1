@@ -112,3 +112,44 @@ fullName(p)
 
 // Note that a field can be made optional with question mark
 // Use case would be in forms where not all fields are mandatory
+
+
+// CLASSES 
+
+class Employee {
+    employeeName: string
+
+    constructor(name: string) {
+        this.employeeName = name
+    }
+
+    greet() {
+        console.log(`Good Morning ${this.employeeName}`)
+    }
+}
+
+let emp1 = new Employee('Alex')
+console.log(emp1.employeeName)
+emp1.greet()
+
+class Manager extends Employee {
+    constructor(managerName: string) {
+        super(managerName)
+    }
+    delegateWork() {
+        console.log(`Manager delegating tasks`)
+    }
+}
+
+let m1 = new Manager('Bruce')
+m1.delegateWork()
+m1.greet()
+console.log(m1.employeeName)
+
+// CLASS ACCESS MODIFIERS
+// To restrict access, add 'public' (free accessibility) or 'private' (access only within class)
+// e.g. 
+// class Employee {
+//      private employeeName: string
+
+// also 'protected' (for access within a class and the classes derived from it)
